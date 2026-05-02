@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaints | ResolveIt</title>
+    <meta name="description" content="View all registered complaints on the ResolveIt platform.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Phosphor Icons for modern minimalist icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">ResolveIt</a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Complaints</a>
+                <a href="new-complaint.html">New Complaint</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1>Recent Complaints</h1>
+            <a href="new-complaint.html" class="btn">
+                <i class="ph ph-plus"></i> File a Complaint
+            </a>
+        </div>
+
+        <div id="complaints-container" class="complaints-grid">
+            <!-- Complaints will be injected here via JS -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> ResolveIt Platform. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

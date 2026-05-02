@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File a Complaint | ResolveIt</title>
+    <meta name="description" content="Register a new complaint on the ResolveIt platform.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">ResolveIt</a>
+            <div class="nav-links">
+                <a href="index.html">Complaints</a>
+                <a href="new-complaint.html" class="active">New Complaint</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-header" style="justify-content: center; margin-bottom: 1rem;">
+            <h1>Register a New Complaint</h1>
+        </div>
+
+        <div class="form-container">
+            <form id="complaint-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="e.g. John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" class="form-control" placeholder="e.g. New York" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" name="mobile" class="form-control" placeholder="e.g. +1 234 567 8900" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="complaintText">Complaint Description</label>
+                    <textarea id="complaintText" name="complaintText" class="form-control" placeholder="Please describe your issue in detail..." required></textarea>
+                </div>
+                <div class="form-group" id="ai-section" style="display: none; background: var(--bg-secondary); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-color); margin-top: 1rem;">
+                    <label style="display: flex; align-items: center; gap: 0.5rem; color: var(--primary-color);">
+                        <i class="ph ph-sparkle"></i> AI Clarification
+                    </label>
+                    <p id="ai-question-text" style="margin-bottom: 1rem; font-weight: 500;">Generating question...</p>
+                    
+                    <label for="aiAnswer">Your Response</label>
+                    <textarea id="aiAnswer" name="aiAnswer" class="form-control" placeholder="Type your answer here..."></textarea>
+                </div>
+
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <button type="button" id="btn-next" class="btn" style="flex: 1;">
+                        <i class="ph ph-sparkle"></i> Continue
+                    </button>
+                    <button type="submit" id="btn-submit" class="btn" style="flex: 1; display: none;">
+                        <i class="ph ph-paper-plane-tilt"></i> Submit Complaint
+                    </button>
+                    <a href="index.html" class="btn btn-secondary" style="flex: 1; text-align: center;">
+                        Cancel
+                    </a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> ResolveIt Platform. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
